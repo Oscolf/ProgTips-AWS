@@ -3,25 +3,25 @@ function validarUsuario() {
   user = loginData[0].value;
   password = loginData[1].value;
 
-  console.log("Usuario: " + user);
-  console.log("Contraseña: " + password);
+  console.log("¡Usuario registrado!");
 
   alert("¡Hola " + user + ", ha accedido corrrectamente a ProgTips!");
 
-  // se muestra el usuario y la contraseña en elementos HTML
-
-  userElement = document.createElement("p");
-  passwordElement = document.createElement("p");
+  userElement = document.createElement("article");
 
   userElement.textContent = "Usuario: " + user;
+  userElement.style.color = "white";
+  userElement.style.margin = "0 auto";
 
   userInfoDiv = document.createElement("div");
-  userInfoDiv.style.border = "1px solid black";
-  userInfoDiv.style.padding = "10px";
-  userInfoDiv.style.marginTop = "10px";
-
   userInfoDiv.appendChild(userElement);
 
+  userInfoDiv.style.border = "1px solid white";
+  userInfoDiv.style.padding = "2px";
+  userInfoDiv.style.marginTop = "2px";
+  userInfoDiv.style.backgroundColor = "#aaa";
+
   loginContainer = document.getElementsByClassName("login");
+
   loginContainer[0].appendChild(userInfoDiv);
 }
